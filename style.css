@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: #111;
+  font-family: Arial, sans-serif;
+}
+
+#game {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background:
+    radial-gradient(circle, #555 1px, transparent 1px);
+  background-size: 30px 30px;
+  overflow: hidden;
+}
+
+#score,
+#time {
+  position: absolute;
+  top: 20px;
+  z-index: 10;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px black;
+}
+
+#score {
+  left: 20px;
+}
+
+#time {
+  right: 20px;
+}
+
+#target {
+  position: absolute;
+  font-size: 80px;
+  user-select: none;
+  transform: translate(-50%, -50%);
+}
+
+#crosshair {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 70px;
+  height: 70px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.horizontal {
+  position: absolute;
+  left: 0;
+  top: 34px;
+  width: 70px;
+  height: 2px;
+  background: white;
+}
+
+.vertical {
+  position: absolute;
+  left: 34px;
+  top: 0;
+  width: 2px;
+  height: 70px;
+  background: white;
+}
+
+.center {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
